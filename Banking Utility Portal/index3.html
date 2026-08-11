@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Bank Ltd.</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Secure Bank Ltd.</h1>
+        <p>Online Banking Utility Portal</p>
+    </header>
+
+    <main>
+
+        <!-- Loan Eligibility -->
+        <section class="card">
+            <h2>1. Loan Eligibility Checker</h2>
+
+            <label for="loanIncome">Monthly Income (₹):</label>
+            <input type="number" id="loanIncome" placeholder="Enter monthly income">
+
+            <label for="loanAge">Age:</label>
+            <input type="number" id="loanAge" placeholder="Enter age">
+
+            <label for="creditScore">Credit Score:</label>
+            <input type="number" id="creditScore" placeholder="Enter credit score">
+
+            <button onclick="checkLoanEligibility()">Check Eligibility</button>
+
+            <p id="loanResult" class="result"></p>
+        </section>
+
+
+        <!-- EMI Calculator -->
+        <section class="card">
+            <h2>2. EMI Calculator</h2>
+
+            <label for="loanAmount">Loan Amount (₹):</label>
+            <input type="number" id="loanAmount" placeholder="Enter loan amount">
+
+            <label for="interestRate">Annual Interest Rate (%):</label>
+            <input type="number" id="interestRate" step="0.01"
+                   placeholder="Enter interest rate">
+
+            <label for="loanTenure">Loan Tenure (Years):</label>
+            <input type="number" id="loanTenure" placeholder="Enter years">
+
+            <button onclick="calculateEMI()">Calculate EMI</button>
+
+            <p id="emiResult" class="result"></p>
+        </section>
+
+
+        <!-- Simple Interest -->
+        <section class="card">
+            <h2>3. Interest Calculator</h2>
+
+            <label for="principal">Principal Amount (₹):</label>
+            <input type="number" id="principal" placeholder="Enter principal">
+
+            <label for="simpleRate">Rate of Interest (%):</label>
+            <input type="number" id="simpleRate" step="0.01"
+                   placeholder="Enter rate">
+
+            <label for="time">Time (Years):</label>
+            <input type="number" id="time" placeholder="Enter years">
+
+            <button onclick="calculateInterest()">Calculate Interest</button>
+
+            <p id="interestResult" class="result"></p>
+        </section>
+
+
+        <!-- Account Utility -->
+        <section class="card">
+            <h2>4. Account Utility</h2>
+
+            <label for="accountBalance">Current Balance (₹):</label>
+            <input type="number" id="accountBalance"
+                   placeholder="Enter balance">
+
+            <label for="transaction">Transaction Amount (₹):</label>
+            <input type="number" id="transaction"
+                   placeholder="Enter transaction amount">
+
+            <label for="transactionType">Transaction Type:</label>
+
+            <select id="transactionType">
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+            </select>
+
+            <button onclick="processTransaction()">Process Transaction</button>
+
+            <p id="accountResult" class="result"></p>
+        </section>
+
+
+        <!-- Interest Table -->
+        <section class="card">
+            <h2>5. Interest Table</h2>
+
+            <label for="tablePrincipal">Principal Amount (₹):</label>
+            <input type="number" id="tablePrincipal"
+                   placeholder="Enter principal">
+
+            <label for="tableRate">Annual Interest Rate (%):</label>
+            <input type="number" id="tableRate" step="0.01"
+                   placeholder="Enter rate">
+
+            <button onclick="generateInterestTable()">
+                Generate Interest Table
+            </button>
+
+            <div id="interestTable"></div>
+        </section>
+
+
+        <!-- Account Summary -->
+        <section class="card">
+            <h2>6. Account Summary</h2>
+
+            <label for="summaryBalance">Starting Balance (₹):</label>
+            <input type="number" id="summaryBalance"
+                   placeholder="Enter starting balance">
+
+            <label for="summaryMonths">Number of Months:</label>
+            <input type="number" id="summaryMonths"
+                   placeholder="Enter number of months">
+
+            <button onclick="generateAccountSummary()">
+                Generate Summary
+            </button>
+
+            <div id="accountSummary"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Secure Bank Ltd. | Banking Utility Portal</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
